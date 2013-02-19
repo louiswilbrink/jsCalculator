@@ -1,0 +1,45 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stylesheet.css') }}">
+  <link href='http://fonts.googleapis.com/css?family=Iceland' rel='stylesheet' type='text/css'>
+  <script src="{{ url_for('static', filename='javascript/calculator.js') }}"></script>
+</head>
+<body>
+
+<!-- Calculator display -->
+<input id="box" type="text" value="" readonly>
+<!-- Buttons 1, 2, 3, and + -->
+<div class="row">
+  <div id="num1" class="square" onclick="addInput('1')">1</div>
+  <div id="num2" class="square" onclick="addInput('2')">2</div>
+  <div id="num3" class="square" onclick="addInput('3')">3</div>
+  <div id="plus" class="square" onclick="addOperator('+')">+</div>
+</div>
+<!-- Buttons 4, 5, 6, and - -->
+<div class="row">
+  <div id="num4" class="square" onclick="addInput('4')">4</div>
+  <div id="num5" class="square" onclick="addInput('5')">5</div>
+  <div id="num6" class="square" onclick="addInput('6')">6</div>
+  <div id="minus" class="square" onclick="addOperator('-')">-</div>
+</div>
+<!-- Buttons 7, 8, 9, and * -->
+<div class="row">
+  <div id="num7" class="square" onclick="addInput('7')">7</div>
+  <div id="num8" class="square" onclick="addInput('8')">8</div>
+  <div id="num9" class="square" onclick="addInput('9')">9</div>
+  <div id="multiply" class="square" onclick="addOperator('*')">x</div>
+</div>
+<!-- Buttons ., 0, =, and / -->
+<div class="row">
+  <div id="decimal" class="square" onclick="addInput('.')">.</div>
+  <div id="num0" class="square" onclick="addInput('0')">0</div>
+  <div id="equal" class="square" onclick="solve()">=</div>
+  <div id="divide" class="square" onclick="addOperator('/')">/</div>
+</div>
+
+</body>
+
+<script>
+  document.onload = loadElements();
+</script>
+</html>
